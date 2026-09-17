@@ -1,0 +1,14 @@
+# TIA Portal Temporary and Build Files
+Logs/
+TMP/
+*.bak
+*~
+*.tmp
+*.dmp
+*.ap17.lock
+*.ap16.lock
+
+# Exclude Heavy Media Binaries from Git (Keep local)
+media/*.mp4
+media/*.mkv
+media/*.avi

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DownloadTask>
+  <ProjectInfo
+    DeviceVersion="15.0.0.0"
+    CreationTime="2024-11-08 23:24:52 (UTC)"
+    Runtime="COLORADO"
+    RtProjectName="Tia Portal Ετικετες_V17.HMI_1[TP700 Comfort]"
+    RtProjectFolderName="Tia Portal Ετικετες_V17.HMI_1[TP700 Comfort]"
+    DeviceType="TP700 Comfort"
+    DisplayOrientation="0"
+    RTReleaseNo="15.0.0.3"
+    ImageReleaseNo="15.0.0.3"
+    RTCV="15.0.0.3"
+    PRCV="15.0.0.3"
+    FirmwareFileName=""
+    RuntimeFileName=""
+    RuntimeAddonFolderName="CP_7_9" />
+  <FullDownload>pdata.fwc</FullDownload>
+  <FullDownload
+    type="ADMINDATA">pdata.pwx</FullDownload>
+  <FullDownload>ProjectSettings.hsf</FullDownload>
+  <FullDownload>DeviceSettings.hsf</FullDownload>
+</DownloadTask>
