@@ -1,4 +1,4 @@
-# P06: Pneumatic Sorting System (PLC S7-1200 + Factory I/O)
+﻿# Pneumatic Sorting System (PLC S7-1200 + Factory I/O)
 
 ![Siemens S7-1200](https://img.shields.io/badge/Hardware-Siemens_S7--1200-009999?style=for-the-badge&logo=siemens&logoColor=white)
 ![TIA Portal V17](https://img.shields.io/badge/Software-TIA_Portal_V17-00599C?style=for-the-badge)
