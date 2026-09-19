@@ -20,33 +20,33 @@ Virtual Commissioning (Digital Twin methodology) is revolutionizing industrial a
 
 ## System Architecture & Industrial Network Topology
 
-```mermaid
+mermaid
 flowchart TD
-    FIO[Factory I/O Plant Physics Engine] <-->|S7-PLCSIM TCP/IP Driver| PLCSIM[S7-PLCSIM Virtual PLC]
+    FIO["Factory I/O Plant Physics Engine"] <-->|S7-PLCSIM TCP/IP Driver| PLCSIM["S7-PLCSIM Virtual PLC"]
     
     subgraph Siemens TIA Portal V17
-        PLCSIM <-->|Internal Process Image| S71200[S7-1200 CPU Logic / LAD]
-        S71200 <-->|HMI Tags / DBs| WINCC[WinCC HMI Runtime]
+        PLCSIM <-->|Internal Process Image| S71200["S7-1200 CPU Logic / LAD"]
+        S71200 <-->|HMI Tags / DBs| WINCC["WinCC HMI Runtime"]
     end
     
-    WINCC --> UI[Operator Dashboard]
-```
+    WINCC --> UI["Operator Dashboard"]
+
 
 ## Automation Theory & Mathematical Model
 
 ### PLC Deterministic Scan Cycle
-The Siemens S7-1200 operates on a strict cyclic execution model, ensuring deterministic control. The total scan time $T_{scan}$ is modeled as:
-$$ T_{scan} = T_{read} + T_{exec} + T_{comm} + T_{write} $$
+The Siemens S7-1200 operates on a strict cyclic execution model, ensuring deterministic control. The total scan time $T_{"scan"}$ is modeled as:
+$$ T_{"scan"} = T_{"read"} + T_{"exec"} + T_{"comm"} + T_{"write"} $$
 Where:
-- $T_{read}$: Time to read physical inputs to the Process Image Input (PII) table.
-- $T_{exec}$: Execution time of the Ladder Logic (OB1 main sweep).
-- $T_{comm}$: Time allocated for HMI communication and diagnostics.
-- $T_{write}$: Time to flush the Process Image Output (PIQ) table to the physical actuators.
+- $T_{"read"}$: Time to read physical inputs to the Process Image Input (PII) table.
+- $T_{"exec"}$: Execution time of the Ladder Logic (OB1 main sweep).
+- $T_{"comm"}$: Time allocated for HMI communication and diagnostics.
+- $T_{"write"}$: Time to flush the Process Image Output (PIQ) table to the physical actuators.
 
 ### Electro-Pneumatic Sequencing Logic
-Actuator firing relies on a boolean state matrix preventing collisions. For instance, the Pusher Solenoid ($Q_{push}$) is driven by:
-$$ Q_{push} = S_{color} \land S_{position} \land \neg E_{stop} \land \neg T_{debounce} $$
-Where $T_{debounce}$ represents an IEC timer (TON) masking sensor noise.
+Actuator firing relies on a boolean state matrix preventing collisions. For instance, the Pusher Solenoid ($Q_{"push"}$) is driven by:
+$$ Q_{"push"} = S_{"color"} \land S_{"position"} \land \neg E_{"stop"} \land \neg T_{"debounce"} $$
+Where $T_{"debounce"}$ represents an IEC timer (TON) masking sensor noise.
 
 ## PLC Tag & I/O Allocation Table
 *Extract from the original TIA Portal Symbol Table.*
@@ -98,4 +98,4 @@ Mechatronics Engineer | Mechanical Design & CAD (SolidWorks & AutoCAD) | Prevent
 [GitHub](https://github.com/Hassan-Moqbel) · [Facebook](https://www.facebook.com/share/1BqxAgVjHi/) · [LinkedIn](https://www.linkedin.com/in/hassan-moqbel)
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the ["MIT License"](LICENSE).
