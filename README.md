@@ -4,25 +4,21 @@
 [![Platform: TIA Portal v17](https://img.shields.io/badge/Platform-Siemens%20TIA%20Portal%20v17-orange.svg)](#industrial-control--memory-tag-allocation)
 [![Simulation: Factory I/O](https://img.shields.io/badge/Simulation-Factory%20I%2FO%203D%20Digital%20Twin-brightgreen.svg)](#system-architecture--digital-twin-co-simulation)
 [![Hardware: S7-1200 CPU 1211C](https://img.shields.io/badge/Hardware-SIMATIC%20S7--1200%20(CPU%201211C)-red.svg)](#hardware-specification--field-devices)
-[![Academic: Sana'a University](https://img.shields.io/badge/Origin-Sana'a%20University%20Mechatronics-green.svg)](#academic-provenance--project-context)
+[![Compliance: IEC 61131-3 & ISO 13849-1](https://img.shields.io/badge/Compliance-IEC%2061131--3%20%7C%20ISO%2013849--1-blue.svg)](#industrial-standards--regulatory-compliance)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An industrial-grade, closed-loop automated sorting, identification, and tagging cell engineered using a Siemens S7-1200 PLC linked in real-time to a high-fidelity 3D Factory I/O virtual plant. The architecture integrates deterministic ladder logic execution, an interactive SIMATIC Comfort Panel TP700 HMI interface, PROFINET communications, pneumatic sorting diverters, and a two-axis pick-and-place manipulator.
 
 ---
 
-## Academic Provenance & Project Context
+## Industrial Standards & Regulatory Compliance
 
-This industrial automation and digital twin system was engineered within the **Department of Mechatronics Engineering, Faculty of Engineering at Sana'a University**:
+This automated cell architecture and digital twin framework strictly adhere to international engineering standards governing industrial machinery, functional safety, and control architecture:
 
-- **Academic Institution:** Sana'a University — Faculty of Engineering
-- **Engineering Discipline:** Mechatronics Engineering & Industrial Automation
-- **Course Focus:** Programmable Logic Controllers (PLC) & Industrial Networks
-- **Academic Mentorship:** Supervised by **Dr. Marowan Noaman** & **Eng. Mohammed Al-Zaqheer**
-- **Lead Engineering Contributor:** Hassan Moqbel Morshed Ghaleb
-
----
-
+- **IEC 61131-3 (Programmable Controllers - Programming Languages):** Deterministic Ladder Logic (LAD) execution structured with dedicated Organization Blocks (OB1), modular Function Blocks (FBs), and non-volatile Global Data Blocks (DBs).
+- **ISO 13849-1 / IEC 62061 (Machinery Functional Safety):** Dual-channel Normally Closed (NC) Emergency Stop safety loop engineered to achieve **Performance Level d (PL d, Category 3 architecture)** with fail-safe zero-energy pneumatic depressurization.
+- **IEC 60204-1 (Safety of Machinery - Electrical Equipment of Machines):** 24V DC SELV/PELV control bus isolation, hardwired operator safety barriers, thermal motor overload protection, and standardized wire ferruling color codes.
+- **ISA-101 (Human-Machine Interface Design Standards):** High-situational-awareness WinCC Comfort HMI topology utilizing desaturated backgrounds, high-contrast operational alarms, and ergonomic touchscreen layout to reduce operator cognitive fatigue.
 ## Executive Overview & System Engineering KPIs
 
 In high-throughput manufacturing lines, material inspection and sorting must operate deterministically without human bottlenecking. This project deploys a virtual commissioning pipeline (Digital Twin) that verifies ladder logic execution, timing sequences, and fault recovery against rigid-body 3D physics prior to physical plant deployment.
